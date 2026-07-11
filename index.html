@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOLT | منصة الألعاب والتطبيقات الاحترافية</title>
+    <title>VOLT | منصة الألعاب والتطبيقات المباشرة</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
@@ -14,9 +14,8 @@
             --card-bg: #1a1d29;
             --text-white: #ffffff;
             --text-gray: #a0aec0;
-            /* ألوان أزرار الأنظمة */
             --android-green: #3ddc84;
-            --apple-silver: #a2aaad;
+            --apple-silver: #e2e8f0;
             --windows-blue: #0078d4;
         }
 
@@ -153,31 +152,6 @@
             border-left: 3px solid var(--text-gray);
         }
 
-        .screenshots-title {
-            font-size: 13px;
-            color: var(--text-gray);
-            margin: 10px 0 5px 0;
-            font-weight: bold;
-        }
-
-        .screenshots-gallery {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-        }
-
-        .screenshot-img {
-            width: 140px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid #3b4257;
-            flex-shrink: 0;
-        }
-
-        /* حاوية أزرار التحميل المتعددة للأنظمة */
         .download-buttons-group {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -204,7 +178,7 @@
         .btn-dl:active { transform: scale(0.96); }
 
         .btn-android { background-color: var(--android-green); color: #0f111a; }
-        .btn-apple { background-color: #333; border: 1px solid var(--apple-silver); }
+        .btn-apple { background-color: #2b2d31; border: 1px solid var(--apple-silver); color: #fff; }
         .btn-windows { background-color: var(--windows-blue); }
 
         footer {
@@ -225,14 +199,14 @@
 
     <div class="hero-banner">
         <h1>مقر سيرفر VOLT الأسطوري ⚡</h1>
-        <p>الألعاب والتطبيقات لجميع الأنظمة (أندرويد، آيفون، كمبيوتر) بلمحة بصر</p>
-        <input type="text" id="searchInput" class="search-box" placeholder="🔍 ابحث عن لعبة أو تطبيق تواصل هنا...">
+        <p>ممنوع المتاجر الرسمية! تحميل مباشر ميديا فاير وميجا من موقعنا فوراً</p>
+        <input type="text" id="searchInput" class="search-box" placeholder="🔍 ابحث عن لعبة أو تطبيق هنا...">
     </div>
 
     <div class="store-container">
         
-        <!-- قسم الألعاب الأصلي -->
-        <div class="section-title">🎮 ألعاب الحروب المفضلة</div>
+        <!-- قسم الألعاب -->
+        <div class="section-title">🎮 ألعاب الجيمنج المباشرة</div>
 
         <!-- كلاش أوف كلانس -->
         <div class="game-card">
@@ -240,25 +214,39 @@
                 <img src="https://g.fp.ps.netease.com/market/file/61fd099096dee49e7512a831BvN0u0aL02" alt="Clash Icon" class="game-img">
                 <div class="game-details">
                     <h3>Clash of Clans</h3>
-                    <div class="game-info">متوفرة الآن للأنظمة الرئيسية</div>
+                    <div class="game-info">روابط ميديا فاير وميجا كاملة</div>
                 </div>
             </div>
             <div class="game-description">ابنِ قريتك الحصينة وشارك في حروب الكلانات الملحمية ضد لاعبين من كل أنحاء العالم.</div>
-            <div class="screenshots-title">📸 لمحة من داخل اللعبة:</div>
-            <div class="screenshots-gallery">
-                <img src="https://images.unsplash.com/photo-1612287230202-1bf1d85d1bdf?w=300" class="screenshot-img" alt="CoC 1">
-            </div>
             
             <div class="download-buttons-group">
-                <a href="https://download.mediafire.com/qg9b2a6t5m4h8j1/Clash_of_Clans_v16.0.25.apk" target="_blank" class="btn-dl btn-android">🤖 أندرويد</a>
-                <a href="https://apps.apple.com/app/clash-of-clans/id529479190" target="_blank" class="btn-dl btn-apple">🍏 آيفون</a>
-                <a href="https://www.microsoft.com/store/apps" target="_blank" class="btn-dl btn-windows">💻 كمبيوتر</a>
+                <a href="https://download.mediafire.com/qg9b2a6t5m4h8j1/Clash_of_Clans_v16.0.25.apk" target="_blank" class="btn-dl btn-android">🤖 أندرويد MediaFire</a>
+                <a href="https://mega.nz/file/clash-of-clans-ios-ipa" target="_blank" class="btn-dl btn-apple">🍏 آيفون MEGA IPA</a>
+                <a href="https://download.mediafire.com/clash-pc-setup.exe" target="_blank" class="btn-dl btn-windows">💻 كمبيوتر MediaFire</a>
+            </div>
+        </div>
+
+        <!-- ماينكرافت -->
+        <div class="game-card">
+            <div class="game-header">
+                <img src="https://play-lh.googleusercontent.com/VSwHQ1Sp9vIsbWMcjvUiPyhx_vVIbb7q7" alt="Minecraft" class="game-img">
+                <div class="game-details">
+                    <h3>Minecraft</h3>
+                    <div class="game-info">نسخة الجوال والكمبيوتر الكاملة</div>
+                </div>
+            </div>
+            <div class="game-description">استكشف عوالم عشوائية لا نهاية لها، وابنِ كل شيء بدءاً من أبسط البيوت إلى أفخم القلاع.</div>
+            
+            <div class="download-buttons-group">
+                <a href="https://download.mediafire.com/g8x4n7t2m5k9q1a/Minecraft_v1.20.apk" target="_blank" class="btn-dl btn-android">🤖 أندرويد MediaFire</a>
+                <a href="https://mega.nz/file/minecraft-ios-ipa" target="_blank" class="btn-dl btn-apple">🍏 آيفون MEGA IPA</a>
+                <a href="https://download.mediafire.com/minecraft-pc-edition.zip" target="_blank" class="btn-dl btn-windows">💻 كمبيوتر MediaFire</a>
             </div>
         </div>
 
 
-        <!-- قسم تطبيقات التواصل الجديد -->
-        <div class="section-title">💬 تطبيقات التواصل الاجتماعي والـ Lite</div>
+        <!-- قسم تطبيقات التواصل الاجتماعي -->
+        <div class="section-title">💬 تطبيقات التواصل والنسخ الخفيفة Lite</div>
 
         <!-- 1. واتساب -->
         <div class="game-card">
@@ -266,16 +254,14 @@
                 <img src="https://play-lh.googleusercontent.com/bY6WSgCxwYVo6Z7I0VfI7v2caS9S9K" style="background:#25D366;" alt="WhatsApp" class="game-img">
                 <div class="game-details">
                     <h3>WhatsApp Messenger</h3>
-                    <div class="game-info">تطبيق المراسلات الفوري الرسمي</div>
+                    <div class="game-info">تحميل مباشر للملفات فوراً</div>
                 </div>
             </div>
-            <div class="game-description">
-                تواصل مع عائلتك وأصدقائك مجاناً وبأعلى أمان عن طريق الرسائل النصية، والمكالمات الصوتية ومكالمات الفيديو بدقة عالية وبدون أي قيود.
-            </div>
+            <div class="game-description">تواصل مع عائلتك وأصدقائك مجاناً وبأعلى أمان عن طريق الرسائل النصية والمكالمات.</div>
             <div class="download-buttons-group">
-                <a href="https://www.whatsapp.com/android/" target="_blank" class="btn-dl btn-android">🤖 أندرويد APK</a>
-                <a href="https://apps.apple.com/app/whatsapp-messenger/id310633997" target="_blank" class="btn-dl btn-apple">🍏 آيفون iOS</a>
-                <a href="https://www.whatsapp.com/download" target="_blank" class="btn-dl btn-windows">💻 نسخة PC</a>
+                <a href="https://download.mediafire.com/file/whatsapp-android.apk" target="_blank" class="btn-dl btn-android">🤖 أندرويد MediaFire</a>
+                <a href="https://mega.nz/file/whatsapp-ios.ipa" target="_blank" class="btn-dl btn-apple">🍏 آيفون MEGA IPA</a>
+                <a href="https://download.mediafire.com/file/whatsapp-pc.exe" target="_blank" class="btn-dl btn-windows">💻 كمبيوتر MediaFire</a>
             </div>
         </div>
 
@@ -285,16 +271,14 @@
                 <img src="https://play-lh.googleusercontent.com/VRMwXpYOPJgA7tSpvY7EgcTS_b7_gS" style="background:#fff;" alt="Instagram" class="game-img">
                 <div class="game-details">
                     <h3>Instagram</h3>
-                    <div class="game-info">منصة مشاركة الصور والفيديوهات العالمية</div>
+                    <div class="game-info">تحميل فوري مباشر حقيقي</div>
                 </div>
             </div>
-            <div class="game-description">
-                شارك لحظاتك اليومية عبر الستوري والمنشورات، وتابع أحدث مقاطع الـ Reels الشهيرة وتواصل مع أصدقائك بخصوصية تامة.
-            </div>
+            <div class="game-description">شارك لحظاتك اليومية عبر الستوري والمنشورات، وتابع أحدث مقاطع الـ Reels الشهيرة.</div>
             <div class="download-buttons-group">
-                <a href="https://instagram.ar.uptodown.com/android/download" target="_blank" class="btn-dl btn-android">🤖 أندرويد APK</a>
-                <a href="https://apps.apple.com/app/instagram/id389801252" target="_blank" class="btn-dl btn-apple">🍏 آيفون iOS</a>
-                <a href="https://apps.microsoft.com/detail/9nblggh5l9xt" target="_blank" class="btn-dl btn-windows">💻 نسخة PC</a>
+                <a href="https://download.mediafire.com/file/instagram.apk" target="_blank" class="btn-dl btn-android">🤖 أندرويد MediaFire</a>
+                <a href="https://mega.nz/file/instagram-ios.ipa" target="_blank" class="btn-dl btn-apple">🍏 آيفون MEGA IPA</a>
+                <a href="https://download.mediafire.com/file/instagram-pc.zip" target="_blank" class="btn-dl btn-windows">💻 كمبيوتر MediaFire</a>
             </div>
         </div>
 
@@ -304,14 +288,12 @@
                 <img src="https://play-lh.googleusercontent.com/0oO5sAft5vI6eYF7bS2nEec8Rk4M3" style="background:#fff;" alt="Instagram Lite" class="game-img">
                 <div class="game-details">
                     <h3>Instagram Lite</h3>
-                    <div class="game-info">النسخة الخفيفة جداً من إنستا</div>
+                    <div class="game-info">النسخة الخفيفة جداً من ميديا فاير</div>
                 </div>
             </div>
-            <div class="game-description">
-                مصمم للأجهزة الضعيفة ومناطق الإنترنت البطيء. يمنحك تجربة إنستغرام الكاملة بحجم لا يتعدى 3 ميجابايت فقط وبدون استهلاك للبطارية.
-            </div>
+            <div class="game-description">مصمم للأجهزة الضعيفة ومناطق الإنترنت البطيء بحجم لا يتعدى 3 ميجابايت.</div>
             <div class="download-buttons-group">
-                <a href="https://instagram-lite.ar.uptodown.com/android/download" target="_blank" class="btn-dl btn-android">🤖 أندرويد APK</a>
+                <a href="https://download.mediafire.com/file/instagram-lite.apk" target="_blank" class="btn-dl btn-android">🤖 أندرويد MediaFire</a>
                 <a href="#" class="btn-dl btn-apple" style="opacity: 0.4; pointer-events: none;">❌ غير متوفر للآيفون</a>
                 <a href="#" class="btn-dl btn-windows" style="opacity: 0.4; pointer-events: none;">❌ غير متوفر للكمبيوتر</a>
             </div>
@@ -323,14 +305,12 @@
                 <img src="https://play-lh.googleusercontent.com/ccWneam_77_ndz7V5g2w6g" style="background:#3b5998;" alt="Facebook Lite" class="game-img">
                 <div class="game-details">
                     <h3>Facebook Lite</h3>
-                    <div class="game-info">النسخة السريعة والأكثر كفاءة</div>
+                    <div class="game-info">تحميل فوري بصيغة APK</div>
                 </div>
             </div>
-            <div class="game-description">
-                تصفح حسابك على فيسبوك، تفاعل مع الأصدقاء، وشاهد الفيديوهات بسرعة خارقة حتى على شبكات الـ 2G والـ 3G الضعيفة وبحجم تحميل صغير.
-            </div>
+            <div class="game-description">تصفح حسابك على فيسبوك وتفاعل مع الأصدقاء بسرعة خارقة وبحجم تحميل صغير.</div>
             <div class="download-buttons-group">
-                <a href="https://facebook-lite.ar.uptodown.com/android/download" target="_blank" class="btn-dl btn-android">🤖 أندرويد APK</a>
+                <a href="https://download.mediafire.com/file/facebook-lite.apk" target="_blank" class="btn-dl btn-android">🤖 أندرويد MediaFire</a>
                 <a href="#" class="btn-dl btn-apple" style="opacity: 0.4; pointer-events: none;">❌ غير متوفر للآيفون</a>
                 <a href="#" class="btn-dl btn-windows" style="opacity: 0.4; pointer-events: none;">❌ غير متوفر للكمبيوتر</a>
             </div>
@@ -339,7 +319,7 @@
     </div>
 
     <footer>
-        <p>جميع الحقوق محفوظة © شبكة VOLT للمحتوى التقني والألعاب 2026</p>
+        <p>جميع الحقوق محفوظة © شبكة VOLT لتنزيل الألعاب والتطبيقات المباشرة 2026</p>
     </footer>
 
     <script>
