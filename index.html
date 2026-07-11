@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الألعاب المجاني</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #121212; color: #fff; margin: 0; padding: 20px; text-align: center; }
+        header { background-color: #ff4757; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3); }
+        h1 { margin: 0; font-size: 28px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 10px; }
+        .card { background-color: #1e1e1e; border: 1px solid #333; border-radius: 12px; width: 300px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: #ff4757; }
+        .card img { width: 100%; border-radius: 8px; height: 160px; object-fit: cover; }
+        .card h3 { margin: 15px 0 10px 0; color: #ff4757; }
+        .buttons-container { display: flex; justify-content: space-around; margin-top: 15px; }
+        .btn-play { background-color: #2ed573; color: white; padding: 10px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 14px; }
+        .btn-download { background-color: #1e90ff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🎮 متجر الألعاب المجاني 🎮</h1>
+        <p>العب مباشرة أو حمل ألعابك المفضلة مجاناً وبدون قيود!</p>
+    </header>
+
+    <div class="container">
+
+        <!-- اللعبة الأولى -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500" alt="لعبة 1">
+            <h3>لعبة كرات المطر (أونلاين)</h3>
+            <p>اضغط على الزر الأخضر لتلعبها فوراً وبدون أي تحميل.</p>
+            <div class="buttons-container">
+                <a href="https://play.famobi.com/bubble-woods" target="_blank" class="btn-play">🕹️ العب مباشر</a>
+                <a href="https://www.mediafire.com" target="_blank" class="btn-download">📥 تحميل</a>
+            </div>
+        </div>
+
+        <!-- اللعبة الثانية -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=500" alt="لعبة 2">
+            <h3>لعبة سباق السيارات (تنزيل)</h3>
+            <p>نسخة كاملة مجانية للهواتف التي لا تدعم متجر بلاي.</p>
+            <div class="buttons-container">
+                <a href="https://play.famobi.com/racing-cars" target="_blank" class="btn-play">🕹️ العب مباشر</a>
+                <a href="https://www.mediafire.com" target="_blank" class="btn-download">📥 تحميل APK</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
