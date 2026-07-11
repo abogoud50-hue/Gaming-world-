@@ -36,10 +36,9 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* تعديل خط "تذكار" ليكون كبيراً وفخماً جداً */
         .logo {
             color: var(--bg-color);
-            font-size: 36px; /* تكبير الخط */
+            font-size: 36px;
             font-weight: 700;
             text-decoration: none;
             letter-spacing: 1px;
@@ -67,7 +66,7 @@
         }
 
         .hero h1 {
-            font-size: 48px; /* تكبير اسم الموقع هنا أيضاً */
+            font-size: 48px;
             margin-bottom: 10px;
             font-weight: 700;
         }
@@ -78,6 +77,7 @@
             margin-bottom: 30px;
         }
 
+        /* تم تحويله إلى Form ليعمل مع زر الإنتر في الكيبورد */
         .search-box {
             max-width: 600px;
             margin: 0 auto;
@@ -163,6 +163,7 @@
             border-radius: 20px;
             text-decoration: none;
             font-size: 16px;
+            cursor: pointer;
             transition: 0.3s;
         }
 
@@ -212,10 +213,10 @@
     <nav>
         <a href="#" class="logo">✒️ تِذْكَار</a>
         <div class="nav-links">
-            <a href="#">الرئيسية</a>
-            <a href="#">العصور الأدبية</a>
-            <a href="#">شعر وشعراء</a>
-            <a href="#">اقتباسات</a>
+            <a href="#" onclick="searchPoetry('الشعر')">الرئيسية</a>
+            <a href="#" onclick="searchPoetry('العصور الأدبية')">العصور الأدبية</a>
+            <a href="#" onclick="searchPoetry('شعراء')">شعر وشعراء</a>
+            <a href="#" onclick="searchPoetry('اقتباسات')">اقتباسات</a>
         </div>
     </nav>
 
@@ -223,10 +224,10 @@
     <div class="hero">
         <h1>موسوعة تِذْكَار الأدبية</h1>
         <p>ابحث في روائع القصائد العربية من العصر الجاهلي إلى العصر الحديث</p>
-        <div class="search-box">
-            <input type="text" placeholder="ابحث عن شاعر، قصيدة، أو بيت شعري...">
-            <button>ابحـث</button>
-        </div>
+        <form class="search-box" onsubmit="handleSearch(event)">
+            <input type="text" id="searchInput" placeholder="ابحث عن شاعر، قصيدة، أو بيت شعري...">
+            <button type="submit">ابحـث</button>
+        </form>
     </div>
 
     <!-- المحتوى الثقافي -->
@@ -240,12 +241,12 @@
             <div class="card">
                 <h3>⏳ التصنيف حسب العصور</h3>
                 <div class="pill-list">
-                    <a href="#" class="pill">العصر الجاهلي</a>
-                    <a href="#" class="pill">العصر الإسلامي</a>
-                    <a href="#" class="pill">العصر الأموي</a>
-                    <a href="#" class="pill">العصر العباسي</a>
-                    <a href="#" class="pill">العصر الأندلسي</a>
-                    <a href="#" class="pill">العصر الحديث</a>
+                    <span class="pill" onclick="searchPoetry('العصر الجاهلي')">العصر الجاهلي</span>
+                    <span class="pill" onclick="searchPoetry('العصر الإسلامي')">العصر الإسلامي</span>
+                    <span class="pill" onclick="searchPoetry('العصر الأموي')">العصر الأموي</span>
+                    <span class="pill" onclick="searchPoetry('العصر العباسي')">العصر العباسي</span>
+                    <span class="pill" onclick="searchPoetry('العصر الأندلسي')">العصر الأندلسي</span>
+                    <span class="pill" onclick="searchPoetry('العصر الحديث')">العصر الحديث</span>
                 </div>
             </div>
 
@@ -253,12 +254,12 @@
             <div class="card">
                 <h3>✒️ من أبرز الشعراء</h3>
                 <div class="pill-list">
-                    <a href="#" class="pill">امرؤ القيس</a>
-                    <a href="#" class="pill">المتنبي</a>
-                    <a href="#" class="pill">عنترة بن شداد</a>
-                    <a href="#" class="pill">أحمد شوقي</a>
-                    <a href="#" class="pill">نزار قباني</a>
-                    <a href="#" class="pill">محمود درويش</a>
+                    <span class="pill" onclick="searchPoetry('امرؤ القيس')">امرؤ القيس</span>
+                    <span class="pill" onclick="searchPoetry('المتنبي')">المتنبي</span>
+                    <span class="pill" onclick="searchPoetry('عنترة بن شداد')">عنترة بن شداد</span>
+                    <span class="pill" onclick="searchPoetry('أحمد شوقي')">أحمد شوقي</span>
+                    <span class="pill" onclick="searchPoetry('نزار قباني')">نزار قباني</span>
+                    <span class="pill" onclick="searchPoetry('محمود درويش')">محمود درويش</span>
                 </div>
             </div>
 
@@ -266,23 +267,23 @@
             <div class="card">
                 <h3>💡 أغراض وبحور الشعر</h3>
                 <div class="pill-list">
-                    <a href="#" class="pill">شعر الغزل</a>
-                    <a href="#" class="pill">الحكمة</a>
-                    <a href="#" class="pill">الفخر والمدح</a>
-                    <a href="#" class="pill">بحر الطويل</a>
-                    <a href="#" class="pill">بحر الكامل</a>
-                    <a href="#" class="pill">الرثاء</a>
+                    <span class="pill" onclick="searchPoetry('شعر الغزل')">شعر الغزل</span>
+                    <span class="pill" onclick="searchPoetry('الحكمة')">الحكمة</span>
+                    <span class="pill" onclick="searchPoetry('الفخر والمدح')">الفخر والمدح</span>
+                    <span class="pill" onclick="searchPoetry('بحر الطويل')">بحر الطويل</span>
+                    <span class="pill" onclick="searchPoetry('بحر الكامل')">بحر الكامل</span>
+                    <span class="pill" onclick="searchPoetry('الرثاء')">الرثاء</span>
                 </div>
             </div>
 
         </div>
 
         <!-- بيت شعر مميز -->
-        <div class="quote-section">
+        <div class="quote-section" style="cursor: pointer;" onclick="searchPoetry('السموأل')">
             <div class="quote-text">
                 "إِذا المَرءُ لَم يَدْنَسْ مِنَ اللُّؤْمِ عِرْضُهُ ... فَكُلُّ رِداءٍ يَرْتَدِيهِ جَمِيلُ"
             </div>
-            <div class="quote-author">— السموأل</div>
+            <div class="quote-author">— السموأل (اضغط لقراءة المزيد عنه)</div>
         </div>
 
     </div>
@@ -291,6 +292,24 @@
     <footer>
         <p>جميع الحقوق محفوظة © موسوعة تذكار لتطوير المحتوى الأدبي 2026</p>
     </footer>
+
+    <!-- الكود السحري للربط والبحث التلقائي -->
+    <script>
+        // دالة البحث العام عند الضغط على زر ابحث
+        function handleSearch(event) {
+            event.preventDefault(); // منع الصفحة من التحديث
+            const query = document.getElementById('searchInput').value.trim();
+            if (query !== "") {
+                searchPoetry(query);
+            }
+        }
+
+        // دالة التوجيه الذكي المباشر إلى نتائج الموسوعة
+        function searchPoetry(keyword) {
+            const url = `https://www.aldiwan.net/search.php?q=${encodeURIComponent(keyword)}`;
+            window.open(url, '_blank'); // فتح النتيجة في صفحة جديدة بقسم النتائج الحية
+        }
+    </script>
 
 </body>
 </html>
