@@ -3,67 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر أبو جود لتحميل الألعاب والبرامج</title>
+    <title>ديوان أبو جود - موسوعة الشعر العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: Arial, sans-serif; background-color: #121212; color: #fff; margin: 0; padding: 20px; text-align: center; }
-        header { background-color: #1e90ff; padding: 25px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3); }
-        header h1 { margin: 0; font-size: 30px; }
-        header p { margin: 10px 0 0 0; color: #e0e0e0; font-size: 16px; }
-        .section-title { text-align: right; margin: 40px 20px 10px 20px; font-size: 22px; color: #1e90ff; border-bottom: 2px solid #333; padding-bottom: 5px; }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 10px; }
-        .card { background-color: #1e1e1e; border: 1px solid #333; border-radius: 12px; width: 300px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); transition: 0.3s; text-align: right; display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { transform: translateY(-5px); border-color: #1e90ff; }
-        .card img { width: 100%; border-radius: 8px; height: 160px; object-fit: cover; }
-        .card h3 { margin: 15px 0 10px 0; color: #fff; font-size: 18px; text-align: center; }
-        .card p { font-size: 13px; color: #aaa; line-height: 1.5; margin-bottom: 15px; flex-grow: 1; }
-        .btn-download { background-color: #2ed573; color: white; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 14px; text-align: center; display: block; transition: 0.2s; box-shadow: 0 3px 6px rgba(46, 213, 115, 0.2); }
-        .btn-download:hover { background-color: #26af5f; }
+        :root {
+            --bg-color: #fbfbfa;
+            --dark-brown: #574c48;
+            --copper: #97614e;
+            --taupe: #9b816c;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Amiri', serif;
+            background-color: var(--bg-color);
+            color: var(--dark-brown);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* شريط التنقل العلوي */
+        nav {
+            background-color: var(--dark-brown);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: var(--bg-color);
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: #c2ada4;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        /* القسم الرئيسي (الهيرو) */
+        .hero {
+            background: linear-gradient(rgba(87, 76, 72, 0.8), rgba(87, 76, 72, 0.9)), url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1200') no-repeat center center/cover;
+            padding: 80px 20px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #c2ada4;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Amiri', serif;
+            font-size: 18px;
+        }
+
+        .search-box button {
+            background-color: var(--copper);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 8px;
+            font-family: 'Amiri', serif;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #7a4b3b;
+        }
+
+        /* الحاوية الرئيسية للمحتوى */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: var(--copper);
+            border-bottom: 2px solid var(--taupe);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* شبكة الأقسام والعصور */
+        .grid-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid #e2deda;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--dark-brown);
+            font-size: 22px;
+            border-bottom: 1px dashed var(--taupe);
+            padding-bottom: 10px;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .pill {
+            background-color: var(--bg-color);
+            border: 1px solid #c2ada4;
+            color: var(--dark-brown);
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .pill:hover {
+            background-color: var(--copper);
+            color: var(--white);
+            border-color: var(--copper);
+        }
+
+        /* قسم اقتباسات اليوم */
+        .quote-section {
+            background-color: #f1eeeb;
+            border-right: 5px solid var(--copper);
+            padding: 30px;
+            border-radius: 4px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 24px;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .quote-author {
+            font-size: 18px;
+            color: var(--copper);
+            font-weight: bold;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: var(--dark-brown);
+            color: #c2ada4;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>📥 متجر أبو جود للتحميل المباشر 📥</h1>
-        <p>ألعاب وبرامج أندرويد كاملة بصيغة APK بروابط فورية بدون متاجر وبدون إعلانات مزعجة!</p>
-    </header>
+    <nav>
+        <a href="#" class="logo">📜 ديوان أبو جود</a>
+        <div class="nav-links">
+            <a href="#">الرئيسية</a>
+            <a href="#">العصور الأدبية</a>
+            <a href="#">شعر وعشراء</a>
+            <a href="#">اقتباسات</a>
+        </div>
+    </nav>
 
-    <div class="section-title">🎮 أشهر الألعاب المباشرة</div>
-    <div class="container">
+    <div class="hero">
+        <h1>موسوعة الشعر العربي الأدبية</h1>
+        <p>ابحث في روائع القصائد العربية من العصر الجاهلي إلى العصر الحديث</p>
+        <div class="search-box">
+            <input type="text" placeholder="ابحث عن شاعر، قصيدة، أو بيت شعري...">
+            <button>ابحـث</button>
+        </div>
+    </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1612287230202-1bf1d85d1bdf?w=500" alt="Clash of Clans">
-            <h3>كلاش أوف كلانس (Clash of Clans)</h3>
-            <p>ابنِ قريتك، وشكّل عشيرتك، واقْد قواتك إلى النصر في هذه اللعبة الاستراتيجية الملحمية.</p>
-            <a href="https://d.apkpure.com/b/APK/com.supercell.clashofclans?version=latest" class="btn-download">📥 تحميل APK مباشر</a>
+    <div class="main-container">
+        
+        <div class="section-title">🏛️ تصنيفات الموسوعة الشاملة</div>
+        
+        <div class="grid-sections">
+            
+            <div class="card">
+                <h3>⏳ التصنيف حسب العصور</h3>
+                <div class="pill-list">
+                    <a href="#" class="pill">العصر الجاهلي</a>
+                    <a href="#" class="pill">العصر الإسلامي</a>
+                    <a href="#" class="pill">العصر الأموي</a>
+                    <a href="#" class="pill">العصر العباسي</a>
+                    <a href="#" class="pill">العصر الأندلسي</a>
+                    <a href="#" class="pill">العصر الحديث</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>✒️ من أبرز الشعراء</h3>
+                <div class="pill-list">
+                    <a href="#" class="pill">امرؤ القيس</a>
+                    <a href="#" class="pill">المتنبي</a>
+                    <a href="#" class="pill">عنترة بن شداد</a>
+                    <a href="#" class="pill">أحمد شوقي</a>
+                    <a href="#" class="pill">نزار قباني</a>
+                    <a href="#" class="pill">محمود درويش</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>💡 أغراض وبحور الشعر</h3>
+                <div class="pill-list">
+                    <a href="#" class="pill">شعر الغزل</a>
+                    <a href="#" class="pill">الحكمة</a>
+                    <a href="#" class="pill">الفخر والمدح</a>
+                    <a href="#" class="pill">بحر الطويل</a>
+                    <a href="#" class="pill">بحر الكامل</a>
+                    <a href="#" class="pill">الرثاء</a>
+                </div>
+            </div>
+
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500" alt="Free Fire">
-            <h3>فري فاير (Garena Free Fire)</h3>
-            <p>لعبة البقاء وإطلاق النار الشهيرة؛ 10 دقائق، 50 لاعباً، وناجٍ واحد فقط سيصمد للنهاية.</p>
-            <a href="https://d.apkpure.com/b/APK/com.dts.freefireth?version=latest" class="btn-download">📥 تحميل APK مباشر</a>
+        <div class="quote-section">
+            <div class="quote-text">
+                "إِذا المَرءُ لَم يَدْنَسْ مِنَ اللُّؤْمِ عِرْضُهُ ... فَكُلُّ رِداءٍ يَرْتَدِيهِ جَمِيلُ"
+            </div>
+            <div class="quote-author">— السموأل</div>
         </div>
 
     </div>
 
-    <div class="section-title">📱 أهم التطبيقات والبرامج</div>
-    <div class="container">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=500" alt="WhatsApp">
-            <h3>واتساب ماسنجر (WhatsApp)</h3>
-            <p>تطبيق المراسلة والمكالمات الصوتية والمرئية المجاني والأكثر أماناً وشهرة حول العالم.</p>
-            <a href="https://www.whatsapp.com/android/current/WhatsApp.apk" class="btn-download">📥 تحميل APK مباشر</a>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1598128558393-70ff21433be0?w=500" alt="TikTok">
-            <h3>تيك توك (TikTok)</h3>
-            <p>المنصة العالمية لمشاهدة وصناعة الفيديوهات القصيرة الممتعة والمقاطع الإبداعية.</p>
-            <a href="https://d.apkpure.com/b/APK/com.zhiliaoapp.musically?version=latest" class="btn-download">📥 تحميل APK مباشر</a>
-        </div>
-
-    </div>
+    <footer>
+        <p>جميع الحقوق محفوظة © ديوان أبو جود لتطوير المحتوى الأدبي 2026</p>
+    </footer>
 
 </body>
 </html>
