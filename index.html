@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ديوان أبو جود - موسوعة الشعر العربي</title>
+    <title>تذكار - موسوعة الشعر العربي</title>
+    <!-- استدعاء خط الأميري الفخم من جوجل -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -35,11 +36,14 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
+        /* تعديل خط "تذكار" ليكون كبيراً وفخماً جداً */
         .logo {
             color: var(--bg-color);
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 36px; /* تكبير الخط */
+            font-weight: 700;
             text-decoration: none;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
 
         .nav-links a {
@@ -63,8 +67,9 @@
         }
 
         .hero h1 {
-            font-size: 42px;
+            font-size: 48px; /* تكبير اسم الموقع هنا أيضاً */
             margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .hero p {
@@ -203,18 +208,20 @@
 </head>
 <body>
 
+    <!-- شريط التنقل -->
     <nav>
-        <a href="#" class="logo">📜 ديوان أبو جود</a>
+        <a href="#" class="logo">✒️ تِذْكَار</a>
         <div class="nav-links">
             <a href="#">الرئيسية</a>
             <a href="#">العصور الأدبية</a>
-            <a href="#">شعر وعشراء</a>
+            <a href="#">شعر وشعراء</a>
             <a href="#">اقتباسات</a>
         </div>
     </nav>
 
+    <!-- واجهة البحث والمقدمة -->
     <div class="hero">
-        <h1>موسوعة الشعر العربي الأدبية</h1>
+        <h1>موسوعة تِذْكَار الأدبية</h1>
         <p>ابحث في روائع القصائد العربية من العصر الجاهلي إلى العصر الحديث</p>
         <div class="search-box">
             <input type="text" placeholder="ابحث عن شاعر، قصيدة، أو بيت شعري...">
@@ -222,12 +229,14 @@
         </div>
     </div>
 
+    <!-- المحتوى الثقافي -->
     <div class="main-container">
         
         <div class="section-title">🏛️ تصنيفات الموسوعة الشاملة</div>
         
         <div class="grid-sections">
             
+            <!-- كرت العصور -->
             <div class="card">
                 <h3>⏳ التصنيف حسب العصور</h3>
                 <div class="pill-list">
@@ -240,6 +249,7 @@
                 </div>
             </div>
 
+            <!-- كرت أشهر الشعراء -->
             <div class="card">
                 <h3>✒️ من أبرز الشعراء</h3>
                 <div class="pill-list">
@@ -252,6 +262,7 @@
                 </div>
             </div>
 
+            <!-- كرت بحور الشعر وموضوعاته -->
             <div class="card">
                 <h3>💡 أغراض وبحور الشعر</h3>
                 <div class="pill-list">
@@ -266,6 +277,7 @@
 
         </div>
 
+        <!-- بيت شعر مميز -->
         <div class="quote-section">
             <div class="quote-text">
                 "إِذا المَرءُ لَم يَدْنَسْ مِنَ اللُّؤْمِ عِرْضُهُ ... فَكُلُّ رِداءٍ يَرْتَدِيهِ جَمِيلُ"
@@ -275,8 +287,9 @@
 
     </div>
 
+    <!-- أسفل الصفحة -->
     <footer>
-        <p>جميع الحقوق محفوظة © ديوان أبو جود لتطوير المحتوى الأدبي 2026</p>
+        <p>جميع الحقوق محفوظة © موسوعة تذكار لتطوير المحتوى الأدبي 2026</p>
     </footer>
 
 </body>
